@@ -5,7 +5,7 @@ const CardDetails = () => {
   let { id } = useParams();
 
   let [fetchedData, updateFetchedData] = useState([]);
-  let { name, image, status } = fetchedData;
+  let { name, location, origin, gender, image, status, species } = fetchedData;
 
   let api = `https://rickandmortyapi.com/api/character/${id}`;
 
@@ -31,6 +31,24 @@ const CardDetails = () => {
             return <div className="badge bg-secondary fs-5">{status}</div>;
           }
         })()}
+        <div className="content">
+          <div className="">
+            <span className="fw-bold">Gender : </span>
+            {gender}
+          </div>
+          <div className="">
+            <span className="fw-bold">Location: </span>
+            {location?.name}
+          </div>
+          <div className="">
+            <span className="fw-bold">Origin: </span>
+            {origin?.name}
+          </div>
+          <div className="">
+            <span className="fw-bold">Species: </span>
+            {species}
+          </div>
+        </div>
       </div>
     </div>
   );
