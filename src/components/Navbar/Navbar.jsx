@@ -1,13 +1,14 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import "../../App.scss";
+import logo from "../../assets/rnm.svg";
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
       <div className="container">
         <Link to="/" className="navbar-brand fs-3 ubuntu">
-          The Rick & Morty
+          <img src={logo} alt="Logo" height="50" width="50" />
         </Link>
         <style jsx>{`
           button[aria-expanded="false"] > .close {
