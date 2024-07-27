@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import Cards from './components/Cards/Cards'
-import Filters from './components/Filters/Filters'
+import Filters from './components/Filters/Filter'
 
 function App() {
   let [pageNumber, updatePageNumber] = useState(1);
